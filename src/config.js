@@ -1,10 +1,10 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
  
-const connect = mongoose.createConnection(process.env.DATABASE_URL); // Enter your MongoDB url in the .env file
+const link = mongoose.connect(process.env.DATABASE_URL); // Enter your MongoDB url in the .env file
 
 
-connect
+link
  .then(() => {
     console.log("Database connected...");
 })
